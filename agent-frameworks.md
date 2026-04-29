@@ -726,7 +726,7 @@ Build simple. Validate thoroughly. Add complexity only when forced to.
 
 ---
 
-*Part of the **Ultimate Claude Bundle** — the most complete Claude resource on GitHub.*
+*Part of **Claude OS** — a complete operating layer for Claude.*
 *Star the repo if this saved you time.*
 
 **Last Updated:** April 2026 · 25 frameworks documented · Benchmarked against real production data

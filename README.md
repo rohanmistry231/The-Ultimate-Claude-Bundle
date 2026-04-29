@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🧠 The Ultimate Claude Bundle
+# 🧠 Claude OS
 
-**The most complete Claude resource on GitHub.**
+**The complete operating layer for Claude.**
 
 Commands · MCP Servers · Plugins · Tools · Workflows · Agent Frameworks
 
@@ -29,6 +29,8 @@ The ecosystem exploded in 2025–2026.
 - **100+** commands and prompt codes
 
 Nobody documented all of it in one place.
+
+> “This isn’t a resource. It’s a complete operating layer for Claude.”
 
 **Until now.**
 
@@ -77,6 +79,25 @@ Pick your stack → follow the workflow pattern → choose the right orchestrati
 | Compare CrewAI vs LangGraph | [`agent-frameworks.md`](./agent-frameworks.md) |
 | Pick a vector database | [`tools.md`](./tools.md) |
 | Deploy Claude to production | [`tools.md`](./tools.md) + [`workflows.md`](./workflows.md) |
+
+---
+
+## Claude OS — Layer Model
+
+This is a framework, not just a collection.
+
+1. **Commands** — Interaction
+2. **MCP** — Execution
+3. **Plugins** — Capabilities
+4. **Tools** — Infrastructure
+5. **Workflows** — Automation
+6. **Agents** — Intelligence scaling
+
+## Start Here If You Have 10 Minutes
+
+- Install 3 plugins
+- Add Memory MCP
+- Try Builder–Validator
 
 ---
 
@@ -188,7 +209,7 @@ BEASTMODE    → Maximum effort, no shortcuts
 ## 🏗️ Repo Structure
 
 ```
-ultimate-claude-bundle/
+claude-os/
 │
 ├── README.md                  ← You are here
 │
@@ -229,7 +250,7 @@ Most Claude resources are either:
 
 **Too outdated** — written for Claude 2 or early MCP, missing everything from 2025–2026
 
-This bundle is different. Every entry follows the same structure:
+Claude OS is different. Every entry follows the same structure:
 - What it does (one clear sentence)
 - Why it matters for Claude specifically
 - Working install command or code example

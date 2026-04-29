@@ -1170,7 +1170,7 @@ Start at Phase 2. Advance only when Phase 2 is consistently reliable.
 
 ---
 
-*Part of the **Ultimate Claude Bundle** — the most complete Claude resource on GitHub.*  
+*Part of **Claude OS** — a complete operating layer for Claude.*
 *Star the repo if this saved you time.*
 
 ---
