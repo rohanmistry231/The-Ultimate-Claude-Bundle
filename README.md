@@ -26,7 +26,7 @@ The ecosystem exploded in 2025–2026.
 - **1,200+** MCP servers available
 - **400+** plugins and skills
 - **25+** agent frameworks
-- **50+** built-in commands
+- **100+** commands and prompt codes
 
 Nobody documented all of it in one place.
 
@@ -206,7 +206,7 @@ ultimate-claude-bundle/
 
 | Metric | Number |
 |--------|--------|
-| Commands documented | 80+ |
+| Commands documented | 100+ |
 | MCP servers covered | 25 (from 1,200+ ecosystem) |
 | Memory systems | 10 |
 | Plugins and skills | 40+ |
