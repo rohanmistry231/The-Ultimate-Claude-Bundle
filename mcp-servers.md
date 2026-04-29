@@ -51,7 +51,7 @@ Released by Anthropic in November 2024. Adopted by OpenAI and Google DeepMind in
 claude mcp add --transport http <name> <url>
 
 # With auth header
-claude mcp add --transport http github https://api.github.com/mcp \
+claude mcp add --transport http github https://example.com/mcp \
   --header "Authorization: Bearer $GITHUB_TOKEN"
 
 # Stdio transport (for local/npm packages)
@@ -125,31 +125,31 @@ npx -y @modelcontextprotocol/server-filesystem /path/to/your/project
 
 ---
 
-### 2️⃣ GitHub MCP Server
+### 2️⃣ Git MCP Server
 **Category:** Version Control · **Priority:** ⭐ MUST-HAVE  
-**GitHub:** [modelcontextprotocol/servers/github](https://github.com/modelcontextprotocol/servers/tree/main/src/github)  
-**Official:** Yes (GitHub)
+**Repository:** [modelcontextprotocol/servers/git](https://github.com/modelcontextprotocol/servers/tree/main/src/git)  
+**Official:** Yes
 
-Full GitHub integration from inside Claude. Read repos, manage issues, create pull requests — all via natural language.
+Unified Git server for repository workflows. Claude can manage GitHub and GitLab repositories, inspect branches, create diffs, and help with code review.
 
 **What Claude can do:**
 - Search repos and read code cross-repository
-- Open, comment on, and close issues
+- Open, comment on, and close issues and pull requests
 - Create and review pull requests
 - Manage branches and releases
 - `"Analyze src/ directory and suggest fix for issue #42"` → Claude reads issue → finds root cause → creates PR
 
 **Install:**
 ```bash
-npx -y @modelcontextprotocol/server-github
+npx -y @modelcontextprotocol/server-git
 ```
 ```json
 {
   "mcpServers": {
-    "github": {
+    "git": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "your_token" }
+      "args": ["-y", "@modelcontextprotocol/server-git"],
+      "env": { "GIT_TOKEN": "your_token" }
     }
   }
 }
@@ -158,8 +158,7 @@ npx -y @modelcontextprotocol/server-github
 ---
 
 ### 3️⃣ PostgreSQL MCP Server
-**Category:** Database · **Priority:** ⭐ CORE  
-**GitHub:** [modelcontextprotocol/servers/postgres](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres)
+**Category:** Database · **Priority:** ⭐ CORE
 
 Natural language queries to your PostgreSQL database. Claude inspects your schema automatically — no manual table descriptions needed.
 
@@ -178,8 +177,7 @@ npx -y @modelcontextprotocol/server-postgres postgresql://user:pass@localhost/db
 ---
 
 ### 4️⃣ SQLite MCP Server
-**Category:** Database · **Priority:** ⭐ CORE  
-**GitHub:** [modelcontextprotocol/servers/sqlite](https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite)
+**Category:** Database · **Priority:** ⭐ CORE
 
 Same natural language database access for SQLite. Essential for local dev, prototyping, and embedded apps.
 
@@ -191,9 +189,7 @@ npx -y @modelcontextprotocol/server-sqlite /path/to/database.db
 ---
 
 ### 5️⃣ Slack MCP Server
-**Category:** Team Communication · **Priority:** ⭐ CORE  
-**GitHub:** [modelcontextprotocol/servers/slack](https://github.com/modelcontextprotocol/servers/tree/main/src/slack)  
-**Official:** Yes (Slack)
+**Category:** Team Communication · **Priority:** ⭐ CORE
 
 Read Slack channels, summarize threads, post messages. January 2026 update added interactive drafting — compose in Claude, preview, then approve before posting.
 
@@ -253,8 +249,7 @@ Access, search, and read Google Drive files. Best combined with Gmail and Calend
 ---
 
 ### 8️⃣ Brave Search MCP Server
-**Category:** Web Search · **Priority:** ⭐ CORE  
-**GitHub:** [modelcontextprotocol/servers/brave-search](https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search)
+**Category:** Web Search · **Priority:** ⭐ CORE
 
 Connects Claude to the live internet. Overcomes knowledge cutoff. Real-time news, current library docs, live technical references — all pulled directly into context.
 
@@ -277,8 +272,7 @@ npx -y @modelcontextprotocol/server-brave-search
 ---
 
 ### 9️⃣ Puppeteer MCP Server
-**Category:** Browser Automation · **Priority:** ⭐ CORE  
-**GitHub:** [modelcontextprotocol/servers/puppeteer](https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer)
+**Category:** Browser Automation · **Priority:** ⭐ CORE
 
 Full browser control via Puppeteer. Navigate pages, take screenshots, fill forms, scrape data, automate web workflows.
 
@@ -518,13 +512,13 @@ npx -y @modelcontextprotocol/server-discord
 
 ### 2️⃣4️⃣ GitLab MCP Server
 **Category:** Version Control · **Priority:** ⭐ EXTENDED  
-**GitHub:** [modelcontextprotocol/servers/gitlab](https://github.com/modelcontextprotocol/servers/tree/main/src/gitlab)
+**Repository:** [modelcontextprotocol/servers/git](https://github.com/modelcontextprotocol/servers/tree/main/src/git)
 
-Full GitLab integration. Same capabilities as GitHub MCP but for GitLab-hosted repos.
+Full GitHub and GitLab integration is now handled by the unified Git MCP Server. Use the Git MCP Server above for both hosted and self-hosted repository workflows.
 
 **Install:**
 ```bash
-npx -y @modelcontextprotocol/server-gitlab
+npx -y @modelcontextprotocol/server-git
 ```
 
 ---
